@@ -2,9 +2,11 @@
 Diseñar e implementar un sistema de gestión de usuarios y cuentas de una entidad financiera. Se utiliza una arquitectura de microservicios con Java y Spring
 Boot con apoyo de Docker.
 
-## Instalación
+## Tecnología
 
-Versión de java 21, la instalación se realizó descargando el paquete de instalación de amazon correto.
+Versión de java 21 y Spring Boot 3.4
+Base de Datos MySql
+Docker Compose versión v2.27.0
 
 ## Documentación
 
