@@ -4,9 +4,9 @@ Boot con apoyo de Docker.
 
 ## Tecnología
 
-Versión de java 21 y Spring Boot 3.4
-Base de Datos MySql
-Docker Compose versión v2.27.0
+- Versión de java 21 y Spring Boot 3.4
+- Base de Datos MySql
+- Docker Compose versión v2.27.0
 
 ## Documentación
 
