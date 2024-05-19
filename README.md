@@ -12,7 +12,7 @@ Boot con apoyo de Docker.
 
 Se adjunta el documento con la información detallada. 
 
-[Architecture Technical Proposal.pdf](https://github.com/valery28/master-spring-boot-final-project/files/15368732/Architecture.Technical.Proposal.pdf)
+[Architecture Technical Proposal.pdf](https://github.com/valery28/master-spring-boot-final-project/files/15369977/Architecture.Technical.Proposal.pdf)
 
 Dentro del documento se encuentran las urls para consumir los diferentes servicios, y en la parte de pruebas se tienen imágenes del resultado de las diferentes pruebas.
 
