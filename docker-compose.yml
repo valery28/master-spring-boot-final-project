@@ -1,0 +1,71 @@
+version: '2'
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+    links:
+      - "db:mysql" #db es el nombre de mi componenten, y mysql el nombre del hostname
+
+  db:
+    image: mysql:latest
+    container_name: db #Forma parte de la url en application.yml en el datasource
+    hostname: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: bankdb
+      MYSQL_USER: test
+      MYSQL_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    expose:
+      - "3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  prometheus:
+    image: prom/prometheus:v2.44.0
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+  grafana:
+    image: grafana/grafana:9.5.2
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    volumes:
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.13
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.17.13
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./logstash.yml:/usr/share/logstash/config/logstash.yml
+      - .:/usr/share/logstash/config
+      - ./logs:/usr/share/logstash/logs
+      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    command: [ "-f", "/usr/share/logstash/config/logstash.conf" ]
+    depends_on:
+      - elasticsearch
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.17.13
+    ports:
+      - "5601:5601"
+    depends_on:
+      - logstash
+volumes:
+  mysql_data:

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+    <head>
+        <meta charset="UTF-8">
+        <title>Detalle de Cuenta</title>
+    </head>
+    <body>
+        <h1>INFORMACIÓN DE TU CUENTA</h1>
+        <p><strong>Propietario:</strong> <span th:text="${account.person.name} "></span></p>
+        <p><strong>Número de Cuenta:</strong> <span th:text="${account.accountNumber}"></span></p>
+        <p><strong>Saldo:</strong> <span th:text="${account.Balance}"></span></p>
+        <p><strong>Tarjeta de Débito:</strong> <span th:text="${account.debitCardNumber}"></span></p>
+        <p><strong>Fecha Apertura:</strong> <span th:text="${account.registrationDate}"></span></p>
+    </body>
+</html>
