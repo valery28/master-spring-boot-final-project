@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.grisbi.masterspringbootfinalproject.service.StringUtilitiesServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-05-12T14:57:28" hostname="vrodas-dell" time="0.015">
+<testsuite name="com.grisbi.masterspringbootfinalproject.service.StringUtilitiesServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-05-18T09:40:20" hostname="vrodas-dell" time="0.448">
   <properties/>
-  <testcase name="whenStringNotNull_thenReturnUpperCase()" classname="com.grisbi.masterspringbootfinalproject.service.StringUtilitiesServiceTest" time="0.015">
+  <testcase name="whenStringNotNull_thenReturnUpperCase()" classname="com.grisbi.masterspringbootfinalproject.service.StringUtilitiesServiceTest" time="0.448">
     <failure message="java.lang.AssertionError" type="java.lang.AssertionError">java.lang.AssertionError
 	at com.grisbi.masterspringbootfinalproject.service.StringUtilitiesServiceTest.whenStringNotNull_thenReturnUpperCase(StringUtilitiesServiceTest.java:23)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
@@ -87,5 +87,9 @@
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/home/vrodas/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.12/be4984cb6fd1ef1d11f218a648889dfda44b8a15/byte-buddy-agent-1.14.12.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
 </testsuite>
