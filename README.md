@@ -14,9 +14,8 @@ Se adjunta el documento con la información detallada.
 
 [Architecture Technical Proposal.pdf](https://github.com/valery28/master-spring-boot-final-project/files/15368732/Architecture.Technical.Proposal.pdf)
 
-Dentro del documento asiga para ingresar una nueva cuenta solamente consumir el web service http://localhost:8080/accounts/newAccount y consumir. 
+Dentro del documento se encuentran las urls para consumir los diferentes servicios, y en la parte de pruebas se tienen imágenes de lo que se ha realizado y conectarse
 
-Enviar la información necesaria eb ek tyuto he eepee
 ## Pruebas
 
 Implementar pruebas unitarias de validacion de datos requeridos y correcto formato.
