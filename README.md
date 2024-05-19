@@ -14,7 +14,7 @@ Se adjunta el documento con la información detallada.
 
 [Architecture Technical Proposal.pdf](https://github.com/valery28/master-spring-boot-final-project/files/15368732/Architecture.Technical.Proposal.pdf)
 
-Dentro del documento se encuentran las urls para consumir los diferentes servicios, y en la parte de pruebas se tienen imágenes de lo que se ha realizado y conectarse
+Dentro del documento se encuentran las urls para consumir los diferentes servicios, y en la parte de pruebas se tienen imágenes del resultado de las diferentes pruebas.
 
 ## Pruebas
 
